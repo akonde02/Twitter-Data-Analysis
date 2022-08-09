@@ -41,11 +41,11 @@ class Clean_Tweets:
         convert columns like polarity, subjectivity, retweet_count
         favorite_count etc to numbers
         """
-        df['polarity'] = pd.----
         
-        ----
-        ----
-        
+        columns =['polarity', 'subjectivity', 'favorite_count', 'retweet_count','followers_count','friends_count']
+        for column in columns:
+            df[column] = pd.to_numeric(df[column])
+
         return df
     
     def remove_non_english_tweets(self, df:pd.DataFrame)->pd.DataFrame:
