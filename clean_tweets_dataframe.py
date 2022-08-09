@@ -20,9 +20,8 @@ class Clean_Tweets:
         """
         drop duplicate rows
         """
-        
-        ---
-        
+        df.drop_duplicate(keep=False)
+                
         return df
     def convert_to_datetime(self, df:pd.DataFrame)->pd.DataFrame:
         """
