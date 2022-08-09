@@ -130,10 +130,7 @@ class TweetDfExtractor:
             location = ''
         
         return location
-
-    
-        
-        
+         
     def get_tweet_df(self, save=False)->pd.DataFrame:
         """required column to be generated you should be creative and add more features"""
         
@@ -163,7 +160,6 @@ class TweetDfExtractor:
         
         return df
 
-                
 if __name__ == "__main__":
     # required column to be generated you should be creative and add more features
     columns = ['created_at', 'source', 'original_text','clean_text', 'sentiment','polarity','subjectivity', 'lang', 'favorite_count', 'retweet_count', 
